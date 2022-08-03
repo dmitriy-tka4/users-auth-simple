@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <p><a href="/">Главная</a></p>
+
+  <h1>Login</h1>
+
+  <form action="/login" method="post">
+    <input type="email" name="email" placeholder="email" required>
+    <input type="password" name="password" placeholder="password" required>
+    <button type="submit">Sign in</button>
+  </form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <p><a href="/login">Войти</a> / <a href="/signup">Регистрация</a> / <a href="/profile">Profile</a></p>
+
+  <hr>
+
+  <h1>Users</h1>
+
+  {% if countUsers %}
+  <p><strong>Всего пользователей: {{ countUsers }}</strong></p>
+  {% endif %}
+
+  <ul>
+  {% for user in users %}
+    <li>{{ user.email }}</li>
+  {% else %}
+    <li>Нет пользователей</li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}

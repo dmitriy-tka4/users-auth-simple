@@ -1,0 +1,11 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <p><a href="/">Главная</a></p>
+
+  <h1>Profile</h1>
+
+  <p>Email: {{ user.email }}</p>
+  <p>Created at: {{ user.createdAt }}</p>
+
+{% endblock %}
