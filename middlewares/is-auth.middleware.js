@@ -12,11 +12,14 @@ export default async function isAuth(req, res, next) {
   // verify
   try {
     const decodedPayload = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(decodedPayload);
 
     req.userData = decodedPayload;
 
     return next();
   } catch (e) {
+    console.log(e);
+
     // очистить куки с невалидным токеном
     res.clearCookie('access_token');
 

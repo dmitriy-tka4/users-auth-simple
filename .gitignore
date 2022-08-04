@@ -19,4 +19,5 @@ test
 
 # BD, logs
 *.log
+logs
 npm-debug.log*
